@@ -1,26 +1,23 @@
 public class BankAccount
 {
-   private int acctNum;
-   private double balance;
-   public BankAccount(int num, double bal)
-   {
-      acctNum = num;
-      balance = bal;
-   }
-   @Override
-   public String toString()
-   {
-      String info = "BankAccount acctNum = " + acctNum +
-        "   Balance = $" + balance;
-      return info;
-   }
-   public boolean equals(BankAccount secondAcct)
-   {
-      boolean result;
-      if(acctNum == secondAcct.acctNum && balance == secondAcct.balance)
-        result = true;
-      else
-        result = false;
-      return result;
-   }
+    private int acctNum;
+    private double balance;
+    BankAccount(int num, double bal)
+    {
+        acctNum = num;
+        balance = bal;
+    }
+
+    @Override
+    public String toString()
+    {
+        return "BankAccount acctNum = " + acctNum + "   Balance = $" + balance;
+    }
+
+    boolean equals(BankAccount secondAcct)
+    {
+        boolean result;
+        result = acctNum == secondAcct.acctNum && balance == secondAcct.balance;
+        return result;
+    }
 }
